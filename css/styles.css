@@ -7,19 +7,20 @@
 
 /* ===== Variables ===== */
 :root {
-  --color-primary: #191970;
-  --color-primary-dark: #0F0F4A;
-  --color-accent: #3A5FCD;
-  --color-text: #2D2D2D;
-  --color-text-secondary: #5A5A5A;
-  --color-bg: #FFFFFF;
-  --color-bg-alt: #F5F6F8;
-  --color-border: #D9DDE3;
+  --color-primary: #2C3E50;
+  --color-primary-dark: #1A2836;
+  --color-accent: #4A7C9B;
+  --color-accent-warm: #C8873E;
+  --color-text: #2A2F35;
+  --color-text-secondary: #5D6A75;
+  --color-bg: #FAFBFC;
+  --color-bg-alt: #F0F2F5;
+  --color-border: #D4DAE0;
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
   --max-width: 1140px;
   --radius: 6px;
-  --cable-color: rgba(0, 188, 212, 0.3);
-  --cable-glow: rgba(0, 188, 212, 0.8);
+  --cable-color: rgba(74, 124, 155, 0.3);
+  --cable-glow: rgba(74, 124, 155, 0.8);
 }
 
 /* ===== Base ===== */
@@ -281,8 +282,12 @@ a:hover {
   color: #FFFFFF;
 }
 
+.nav-links .btn--primary {
+  color: #FFFFFF;
+}
+
 .btn--primary:hover {
-  background: #2E4DB8;
+  background: #3B6A87;
 }
 
 .btn--white {
@@ -376,15 +381,15 @@ a:hover {
 }
 
 .metric-icon--green {
-  color: #34D399;
+  color: #7EBEA5;
 }
 
 .metric-icon--blue {
-  color: #60A5FA;
+  color: #7BADC4;
 }
 
 .metric-icon--amber {
-  color: #FBBF24;
+  color: #C8873E;
 }
 
 .metric-headline {
@@ -394,32 +399,97 @@ a:hover {
   line-height: 1.35;
 }
 
+/* ===== Hero Image Section ===== */
+.hero-image-section {
+  padding: 40px 0;
+}
+
+.hero-image {
+  max-width: 1000px;
+  border-radius: 0;
+}
+
 /* ===== Problem Section ===== */
-.problem-cards {
+.problem-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
   margin-bottom: 48px;
+  background: var(--color-primary);
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.problem-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
 }
 
 .problem-card {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-accent);
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border: none;
+  border-left: 4px solid var(--color-accent-warm);
   border-radius: var(--radius);
-  padding: 28px 24px;
+  padding: 20px 24px;
+  cursor: pointer;
+}
+
+.problem-card h3 {
+  color: #FFFFFF;
+}
+
+.problem-card p {
+  color: rgba(255, 255, 255, 0.8);
+  display: none;
+}
+
+.problem-card.active p {
+  display: block;
+  margin-top: 8px;
+}
+
+.problem-card:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.problem-card.active {
+  background: rgba(255, 255, 255, 0.18);
+  border-left-color: #E8A84C;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.problem-image-viewer {
+  position: relative;
+  overflow: hidden;
+}
+
+.problem-image-viewer .painting {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: right center;
+  box-shadow: none;
 }
 
 .problem-card h3 {
   font-size: 18px;
   font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: 8px;
+  color: #FFFFFF;
+  margin-bottom: 0;
 }
 
 .problem-card p {
   font-size: 15px;
-  color: var(--color-text-secondary);
   line-height: 1.6;
 }
 
@@ -909,8 +979,12 @@ a:hover {
     font-size: 16px;
   }
 
-  .problem-cards {
+  .problem-layout {
     grid-template-columns: 1fr;
+  }
+
+  .problem-image-viewer {
+    min-height: 250px;
   }
 
   .why-cards {

@@ -128,6 +128,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initEnergyCables();
 
+  // --- Problem card image switcher ---
+  const problemCards = document.querySelectorAll('.problem-card[data-image]');
+  const problemViewer = document.querySelector('.problem-image-viewer img');
+  if (problemCards.length && problemViewer) {
+    problemCards.forEach(card => {
+      card.addEventListener('click', () => {
+        problemCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        problemViewer.src = card.dataset.image;
+        problemViewer.alt = card.querySelector('h3').textContent + ' illustration';
+      });
+    });
+  }
+
   // --- Early access form (visual only) ---
   const form = document.querySelector('.early-access-form');
   if (form) {
