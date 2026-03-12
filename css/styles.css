@@ -7,20 +7,20 @@
 
 /* ===== Variables ===== */
 :root {
-  --color-primary: #2C3E50;
-  --color-primary-dark: #1A2836;
-  --color-accent: #4A7C9B;
-  --color-accent-warm: #C8873E;
-  --color-text: #2A2F35;
-  --color-text-secondary: #5D6A75;
-  --color-bg: #FAFBFC;
-  --color-bg-alt: #F0F2F5;
-  --color-border: #D4DAE0;
+  --color-primary: #1E3A5F;
+  --color-primary-dark: #142840;
+  --color-accent: #3D8AB9;
+  --color-accent-warm: #D4943F;
+  --color-text: #252B33;
+  --color-text-secondary: #556270;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F4F6F9;
+  --color-border: #D6DCE4;
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
   --max-width: 1140px;
   --radius: 6px;
-  --cable-color: rgba(74, 124, 155, 0.3);
-  --cable-glow: rgba(74, 124, 155, 0.8);
+  --cable-color: rgba(61, 138, 185, 0.3);
+  --cable-glow: rgba(61, 138, 185, 0.8);
 }
 
 /* ===== Base ===== */
@@ -287,7 +287,7 @@ a:hover {
 }
 
 .btn--primary:hover {
-  background: #3B6A87;
+  background: #2E74A3;
 }
 
 .btn--white {
@@ -381,15 +381,15 @@ a:hover {
 }
 
 .metric-icon--green {
-  color: #7EBEA5;
+  color: #4EC9A0;
 }
 
 .metric-icon--blue {
-  color: #7BADC4;
+  color: #5AAED6;
 }
 
 .metric-icon--amber {
-  color: #C8873E;
+  color: #D4943F;
 }
 
 .metric-headline {
@@ -458,7 +458,7 @@ a:hover {
 
 .problem-card.active {
   background: rgba(255, 255, 255, 0.18);
-  border-left-color: #E8A84C;
+  border-left-color: #E9A948;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
